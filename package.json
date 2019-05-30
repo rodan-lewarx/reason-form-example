@@ -1,0 +1,40 @@
+{
+  "name": "form-reason",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "bsb -make-world",
+    "start": "bsb -make-world -w",
+    "clean": "bsb -clean-world",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack -w",
+    "webpack:production": "NODE_ENV=production webpack",
+    "server": "webpack-dev-server"
+  },
+  "keywords": [
+    "BuckleScript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@ahrefs/bs-reactstrap": "^1.0.3",
+    "@glennsl/bs-json": "^3.0.0",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "bs-fetch": "^0.3.1",
+    "bs-reform": "^8.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "lenses-ppx": "^2.0.0",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "reason-react": ">=0.7.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "bs-platform": "^5.0.4",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.8"
+  }
+}
