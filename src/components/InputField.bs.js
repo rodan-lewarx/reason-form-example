@@ -18,7 +18,10 @@ function InputField(Props) {
                         invalid: match ? true : false,
                         onChange: onChange,
                         value: value
-                      }), errorText)
+                      }), React.createElement(Reactstrap.FormFeedback, {
+                        valid: false,
+                        children: errorText
+                      }))
             });
 }
 

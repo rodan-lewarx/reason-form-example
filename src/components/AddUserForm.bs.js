@@ -75,7 +75,7 @@ function AddUserForm$1(Props) {
           /* Custom */Block.__(3, [
               /* FirstName */1,
               (function (values) {
-                  var match = values[/* firstName */1].length > 4 || values[/* firstName */1].length === 0;
+                  var match = values[/* firstName */1].length > 3 || values[/* firstName */1].length === 0;
                   if (match) {
                     return /* Valid */1;
                   } else {
@@ -86,7 +86,7 @@ function AddUserForm$1(Props) {
           /* Custom */Block.__(3, [
               /* LastName */2,
               (function (values) {
-                  var match = values[/* lastName */2].length > 4;
+                  var match = values[/* lastName */2].length > 3;
                   if (match) {
                     return /* Valid */1;
                   } else {
@@ -202,7 +202,9 @@ function AddUserForm$1(Props) {
                           return resetFields(/* () */0);
                         }),
                       children: "Clear Form"
-                    })));
+                    })), React.createElement("div", undefined, typeof result === "number" ? (
+                    result !== 0 ? React.createElement("span", undefined, "Error when sending new user. Please try again later.") : null
+                  ) : React.createElement("span", undefined, "User added succesfully")));
 }
 
 var make = AddUserForm$1;

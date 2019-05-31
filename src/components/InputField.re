@@ -10,7 +10,9 @@ let make = (~label, ~onChange, ~value, ~getErrorText) => {
           onChange
           invalid={Js.String.length(errorText) > 0 ? true : false}
         />
-        {ReasonReact.string(errorText)}
+        <FormFeedback valid=false>
+          {ReasonReact.string(errorText)}
+        </FormFeedback>
       </Label>
     </FormGroup>
   );

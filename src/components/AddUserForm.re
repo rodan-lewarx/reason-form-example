@@ -24,7 +24,7 @@ let make = () => {
           Custom(
             FirstName,
             values =>
-              Js.String.length(values.firstName) > 4
+              Js.String.length(values.firstName) > 3
               || Js.String.length(values.firstName) === 0
                 ? Valid
                 : Error(
@@ -34,7 +34,7 @@ let make = () => {
           Custom(
             LastName,
             values =>
-              Js.String.length(values.lastName) > 4
+              Js.String.length(values.lastName) > 3
                 ? Valid : Error("Last Name must have more than 4 characters"),
           ),
         |]);
@@ -147,6 +147,19 @@ let make = () => {
         <Button color="secondary" onClick={_ => resetFields()}>
           {ReasonReact.string("Clear Form")}
         </Button>
+      </div>
+      <div>
+        {switch (result) {
+         | Success(_) =>
+           <span> {ReasonReact.string("User added succesfully")} </span>
+         | Error =>
+           <span>
+             {ReasonReact.string(
+                "Error when sending new user. Please try again later.",
+              )}
+           </span>
+         | NotSent => ReasonReact.null
+         }}
       </div>
     </Form>
   );
