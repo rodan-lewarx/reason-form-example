@@ -23,7 +23,7 @@
     "bs-fetch": "^0.3.1",
     "bs-reform": "^8.2.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "lenses-ppx": "^2.0.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
